@@ -1,12 +1,22 @@
-# TODO list application - Take home assignment
-This assignment asks the applicant to fork this repository, setup the development environment, edit the template solution to achieve and visualize basic CRUD functionality for an example "ToDoList" data object.
+# ToDo list web application
 
-There is a very useful tutorial you can follow here : https://www.youtube.com/watch?v=eNVbiIsoEUw&ab_channel=SameerSaini (the main difference is it uses Sql Server instead of Postgresql)
+## Assignment 
+Demonstrate your adaptation and versatility skills as a developer! 
 
-## App requirements : 
-- the site will be a SPA, with views dedicated to display, insert, delete, edit messages. (take inspiration from https://www.youtube.com/watch?v=MkESyVB4oUw)
+Fork this repository, setup the development environment, edit the template solution to realize the given requirements.
+
+Try as much as possible to stick to the given technology stack, even if you are not familiar with it.
+
+If you are stuck, there is a very useful tutorial you can follow here: https://www.youtube.com/watch?v=eNVbiIsoEUw&ab_channel=SameerSaini
+
+## App requirements: 
+
+- the site will be a SPA, with views dedicated to display, insert, delete, edit messages. ( ui can look similar to https://www.youtube.com/watch?v=MkESyVB4oUw )
+
 - for simplicity there will be no authentication required.
+
 - the ToDoList object is defined as :
+
 ```
 {
 	guid : "Id"
@@ -15,16 +25,15 @@ There is a very useful tutorial you can follow here : https://www.youtube.com/wa
 	datetime : "CreatedAt"
 }
 ```
-- feel free to expand or add any further funcionality.
+- feel free to expand or add any further functionality to demonstrate your creativity skills.
 
-## Technologies: 
+## Template solution technologies: 
 
 - Visual studio 2022 / VS Code
 - Angular 18
 - .Net 7
 - EntityFramework Core
 - Postgresql
-- Swagger
 
 ### Setup Guide: 
 - Make sure to have Node v18.18.2, npm v9.8.1, angular/cli 15.0.5, .net 7.0 installed.
@@ -41,3 +50,15 @@ There is a very useful tutorial you can follow here : https://www.youtube.com/wa
 
 - https://labpys.com/how-to-create-web-api-crud-in-asp-net-core-with-postgresql/
 - https://learn.microsoft.com/it-it/aspnet/core/client-side/spa/angular?view=aspnetcore-7.0&tabs=visual-studio
+
+## Evaluation criteria
+
+- Completeness: did you complete the features as briefed?
+- Correctness: Does the solution perform in sensible, thought-out ways?
+- Maintainability: is the code written in a clean, maintainable way?
+
+## Completing your work
+
+After you are done, document and comment your code as much as possible, push your changes in your own repository and share the link with the reviewer.
+
+All the best and happy coding.
