@@ -11,7 +11,9 @@ If you are stuck, there is a very useful tutorial you can follow here: https://w
 
 ## App requirements: 
 
-- the site will be a SPA, with a single or multiple views to allow the user to display, insert, delete, edit messages. ( ui can look similar to https://www.youtube.com/watch?v=MkESyVB4oUw )
+- the webapp is a SPA, with a single or multiple views to allow the user to display, insert, delete, edit messages. ( ui can look similar to https://www.youtube.com/watch?v=MkESyVB4oUw )
+
+- cleanup the mock "weatherforecast" api functionality.
 
 - for simplicity there will be no authentication required.
 
