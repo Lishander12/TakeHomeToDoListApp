@@ -15,6 +15,8 @@ If you are stuck, there is a very useful tutorial you can follow here: https://w
 
 - for simplicity there will be no authentication required.
 
+- persist the todolist items on a postgres database instance.
+
 - the ToDoList object is defined as :
 
 ```
