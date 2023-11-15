@@ -3,7 +3,7 @@
 ## Assignment 
 Demonstrate your adaptation and versatility skills as a developer! 
 
-Fork this repository, setup the development environment, edit the template solution to realize the given requirements.
+[Fork this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template), setup the development environment, edit the template solution to realize the given requirements.
 
 Try as much as possible to stick to the given technology stack, even if you are not familiar with it.
 
