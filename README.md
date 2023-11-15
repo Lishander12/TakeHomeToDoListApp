@@ -31,11 +31,11 @@ There is a very useful tutorial you can follow here : https://www.youtube.com/wa
 
 - Configure both the frontend and backend do start on startup for easier debugging
 
-![alt text](https://imgur.com/a/aHiMQh2)
+![alt text](https://imgur.com/a/aHiMQh2.png)
 
 - a successful run should output two browsers, demonstrating mockup frontend and api call functionality
 
-![alt text](https://imgur.com/a/oioO100)
+![alt text](https://imgur.com/a/oioO100.png)
 
 ### Useful links 
 
