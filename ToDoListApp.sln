@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListApp.Server", "ToDoListApp.Server\ToDoListApp.Server.csproj", "{B9894A6E-ACA3-4B96-84C7-9CBAF6AA4BDC}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "todolistapp.client", "todolistapp.client\todolistapp.client.esproj", "{27C045DD-FDB7-4116-99DB-F52129450EFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9894A6E-ACA3-4B96-84C7-9CBAF6AA4BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9894A6E-ACA3-4B96-84C7-9CBAF6AA4BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9894A6E-ACA3-4B96-84C7-9CBAF6AA4BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9894A6E-ACA3-4B96-84C7-9CBAF6AA4BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C045DD-FDB7-4116-99DB-F52129450EFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26291E84-606F-4B20-9FFB-19B0D760F4B7}
+	EndGlobalSection
+EndGlobal
