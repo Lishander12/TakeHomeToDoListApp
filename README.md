@@ -27,7 +27,15 @@ There is a very useful tutorial you can follow here : https://www.youtube.com/wa
 - Swagger
 
 ### Setup Guide: 
-Make sure to have Node v18.18.2, npm v9.8.1, angular/cli 15.0.5, .net 7.0 installed.
+- Make sure to have Node v18.18.2, npm v9.8.1, angular/cli 15.0.5, .net 7.0 installed.
+
+- Configure both the frontend and backend do start on startup for easier debugging
+
+![alt text](https://imgur.com/a/aHiMQh2)
+
+- a successful run should output two browsers, demonstrating mockup frontend and api call functionality
+
+![alt text](https://imgur.com/a/oioO100)
 
 ### Useful links 
 
