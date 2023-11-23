@@ -1,24 +1,72 @@
-﻿<h1 id="tableLabel">Weather forecast</h1>
+﻿
+        <h1 id="tableLabel">To do list</h1>
+        <p>To do list
+            This component demonstrates fetching data from the server.</p>
 
-<p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+<form [formGroup]="taskForm" class="row">
+    <input
+      class="input col-4"
+      type="text"
+      id="task-input-title"
+      formControlName="title"
+      placeholder="task title"
+    >
+    <input
+      class="input col-8"
+      type="text"
+      id="task-input-content"
+      formControlName="contents"
+      placeholder="write a new task content"
+    >
+    <button class="btn btn-success" (click)="addTask()">
+      Add Task
+    </button>
+  </form>
 
-<table *ngIf="forecasts">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let forecast of forecasts">
-            <td>{{ forecast.date }}</td>
-            <td>{{ forecast.temperatureC }}</td>
-            <td>{{ forecast.temperatureF }}</td>
-            <td>{{ forecast.summary }}</td>
-        </tr>
-    </tbody>
-</table>
+
+<div class="table-container">
+    <table *ngIf="toDoListItems" class="table table-dark table-responsive">
+        <thead>
+            <tr>
+                <th>To do list:</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+           
+
+
+<tr *ngFor="let item of toDoListItems">
+    <td>
+      <div *ngIf="!isEditableMap[item.id]">
+        {{ item.title }}
+      </div>
+      <form *ngIf="isEditableMap[item.id]" [formGroup]="editForm">
+        <input class="form-control" formControlName="title" />
+      </form>
+    </td>
+    <td>
+      <div *ngIf="!isEditable(item.id)">
+        {{ item.contents }}
+      </div>
+      <form *ngIf="isEditable(item.id)" [formGroup]="editForm">
+        <input class="form-control" formControlName="contents" />
+      </form>
+    </td>
+    <td>
+      <button class="btn custom-btn-warning" (click)="toggleEdit(item.id)">
+        {{ isEditable(item.id) ? 'Save' : 'Edit' }}
+      </button>
+      <button class="btn custom-btn-danger" (click)="deleteItem(item.id)">
+        {{ isEditable(item.id) ? 'Cancel' : 'Delete' }}
+      </button>
+    </td>
+  </tr>
+  
+
+  
+            <div class="warning-message-input" *ngIf="getFieldControl('name')?.hasError('required')">Campo obbligatorio</div>
+        </tbody>
+    </table>
+</div>

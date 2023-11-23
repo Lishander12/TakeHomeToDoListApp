@@ -1,68 +1,39 @@
-# ToDo list web application
+Angular 15 & ASP.NET 7 To-Do List App
+Descrizione
+Benvenuto nell'applicazione Angular 15 e ASP.NET 7 To-Do List! Questa Single Page Application (SPA) ti permette di gestire facilmente le tue attività quotidiane, consentendoti di inserire, rimuovere, modificare e visualizzare un elenco dinamico di cose da fare.
 
-## Assignment 
-Demonstrate your adaptation and versatility skills as a developer! 
+Funzionalità Principali
+Inserimento di Nuove Attività: Aggiungi rapidamente nuove attività alla tua lista specificando il titolo, i dettagli e la data di creazione.
 
-[Fork this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template), setup the development environment, edit the template solution to realize the given requirements.
+Modifica delle Attività: Modifica i dettagli delle attività esistenti in modo semplice e intuitivo. Utilizza i formGroup di Angular per una gestione avanzata dei moduli.
 
-Try as much as possible to stick to the given technology stack, even if you are not familiar with it.
+Rimozione di Attività: Elimina le attività completate o non più necessarie con un semplice clic.
 
-If you are stuck, there is a very useful tutorial you can follow here: https://www.youtube.com/watch?v=eNVbiIsoEUw&ab_channel=SameerSaini
+Visualizzazione dell'Elenco: Visualizza in tempo reale l'elenco aggiornato delle tue attività da fare.
 
-## App requirements: 
+Tecnologie Utilizzate
+Angular 15: Il frontend dell'app è sviluppato utilizzando Angular nella sua versione 15.
 
-- the webapp is a SPA, with a single or multiple views to allow the user to display, insert, delete, edit messages. ( ui can look similar to https://www.youtube.com/watch?v=MkESyVB4oUw )
+ASP.NET 7: Il backend dell'app è alimentato da ASP.NET 7, offrendo una robusta gestione delle API e una solida connettività al database.
 
-- cleanup the mock "weatherforecast" api functionality.
+Database PostgreSQL su Docker: Il database delle attività è implementato utilizzando PostgreSQL, con un'istanza gestita attraverso Docker per una facile distribuzione e gestione.
 
-- for simplicity there will be no authentication required.
+Verifica Dati con Azure: Per garantire l'affidabilità e la sicurezza dei dati, è stata implementata una verifica dei dati tramite Azure.
 
-- persist the todolist items on a postgres database instance.
+FormGroup di Angular per la Gestione dei Form: La gestione avanzata dei form è ottenuta attraverso l'utilizzo dei formGroup di Angular, offrendo un modo pulito e efficiente per gestire i dati del form.
 
-- the ToDoList object is defined as :
+Istruzioni per l'Installazione
+Backend ASP.NET:
 
-```
-{
-	guid : "Id"
-	string : "Title",
-	string : "Contents",
-	datetime : "CreatedAt"
-}
-```
-- feel free to expand or add any further functionality to demonstrate your creativity skills.
+Assicurati di avere installato .NET SDK 7 sul tuo sistema.
+Naviga nella directory del backend (/backend) e esegui dotnet run per avviare il server.
+Frontend Angular:
 
-## Template solution technologies: 
+Assicurati di avere Node.js installato sul tuo sistema.
+Naviga nella directory del frontend (/frontend) e esegui npm install seguito da ng serve per avviare l'applicazione Angular.
+Database PostgreSQL con Docker:
 
-- Visual studio 2022 / VS Code
-- Angular 18
-- .Net 7
-- EntityFramework Core
-- Postgresql
+Assicurati di avere Docker installato sul tuo sistema.
+crea un image postgreeSql su docker da bash.
+Esegui il comando Docker per avviare un'istanza di PostgreSQL.
 
-### Setup Guide: 
-- Make sure to have Node v18.18.2, npm v9.8.1, angular/cli 15.0.5, .net 7.0 installed.
-
-- Configure both the frontend and backend do start on startup for easier debugging
-
-![alt text](https://i.imgur.com/vvRjfDF.png)
-
-- a successful run should output two browsers, demonstrating mockup frontend and api call functionality
-
-![alt text](https://i.imgur.com/i4dmtTh.png)
-
-### Useful links 
-
-- https://labpys.com/how-to-create-web-api-crud-in-asp-net-core-with-postgresql/
-- https://learn.microsoft.com/it-it/aspnet/core/client-side/spa/angular?view=aspnetcore-7.0&tabs=visual-studio
-
-## Evaluation criteria
-
-- Completeness: did you complete the features as briefed?
-- Correctness: Does the solution perform in sensible, thought-out ways?
-- Maintainability: is the code written in a clean, maintainable way?
-
-## Completing your work
-
-After you are done, document and comment your code as much as possible, push your changes in your own repository and share the link with the reviewer.
-
-All the best and happy coding.

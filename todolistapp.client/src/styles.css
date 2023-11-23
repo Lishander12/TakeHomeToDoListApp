@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #191d20;
+    color: #fff;
+}
+
+
+.table-container {
+    max-width: 100%;
+    margin-top: 3em;
+  }
+
+
+  .custom-btn-danger {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .custom-btn-warning {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .custom-btn-danger:hover {
+    background-color: #dc3545;
+    color: #fff; 
+  }
+
+  .custom-btn-warning:hover {
+    background-color: #ffc107;
+    color: #fff; 
+  }
+
+.align-center{
+    margin-top: 2em;
+}
+.navbar{
+    background-color: #86229a;
+}

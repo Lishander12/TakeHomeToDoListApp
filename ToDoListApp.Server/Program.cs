@@ -7,7 +7,10 @@ namespace ToDoListApp.Server
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
+
+
 
             // Add services to the container.
 
@@ -19,7 +22,17 @@ namespace ToDoListApp.Server
 
             builder.Services.AddDbContext<ToDoListAppDbContext>(options =>
             {
-                options.UseNpgsql(builder.Configuration.GetConnectionString("TodoListConnectionString"));
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            builder.Services.AddCors(options =>
+            {
+             options.AddPolicy("AllowAll", builder =>
+              {
+                 builder.AllowAnyOrigin()
+                     .AllowAnyMethod()
+                       .AllowAnyHeader();
+              });
             });
 
             var app = builder.Build();
@@ -42,6 +55,8 @@ namespace ToDoListApp.Server
             }
 
             app.MapFallbackToFile("/index.html");
+
+            app.UseCors("AllowAll");
 
             app.Run();
         }

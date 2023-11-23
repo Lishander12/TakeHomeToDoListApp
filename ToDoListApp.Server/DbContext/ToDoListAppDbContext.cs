@@ -1,16 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 using ToDoListApp.Server.Entities;
 
 namespace ToDoListApp.Server.DbContext
 {
     public class ToDoListAppDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public ToDoListAppDbContext(DbContextOptions options) : base(options)
+        public ToDoListAppDbContext(DbContextOptions<ToDoListAppDbContext> options) : base(options)
         {
-           
         }
 
-        //TODO ADD DBSETS
-    }   
+        public DbSet<ToDoItem> TodoItems { get; set; }
+
+      
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           
+
+            base.OnModelCreating(modelBuilder);
+        }
+    }
 }
