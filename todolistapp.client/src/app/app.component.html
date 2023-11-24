@@ -1,72 +1,101 @@
 ﻿
-        <h1 id="tableLabel">To do list</h1>
-        <p>To do list
-            This component demonstrates fetching data from the server.</p>
 
+<div class="row page-body">
 
-<form [formGroup]="taskForm" class="row">
-    <input
-      class="input col-4"
-      type="text"
-      id="task-input-title"
-      formControlName="title"
-      placeholder="task title"
-    >
-    <input
-      class="input col-8"
-      type="text"
-      id="task-input-content"
-      formControlName="contents"
-      placeholder="write a new task content"
-    >
-    <button class="btn btn-success" (click)="addTask()">
-      Add Task
-    </button>
-  </form>
-
-
-<div class="table-container">
-    <table *ngIf="toDoListItems" class="table table-dark table-responsive">
-        <thead>
-            <tr>
-                <th>To do list:</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-           
-
-
-<tr *ngFor="let item of toDoListItems">
-    <td>
-      <div *ngIf="!isEditableMap[item.id]">
-        {{ item.title }}
+   <div class="col-4">
+      <div class="card text-bg-dark mb-3">
+        <div class="card-header">
+            <h5 class="card-title">Task Form</h5>
+        </div>
+        <div class="card-body">
+            
+            
+          <form [formGroup]="taskForm" class="row">
+            <div class="form-group col-4">
+              <label for="task-input-title">Task Title</label>
+              <input
+                class="form-control"
+                type="text"
+                id="task-input-title"
+                formControlName="title"
+                placeholder="Enter task title"
+              />
+              <div *ngIf="getFieldControl('title')?.touched && getFieldControl('title')?.invalid" class="error-message">
+                <div class="warning-message-input" *ngIf="getFieldControl('title')?.hasError('required')">Campo obbligatorio</div>
+              </div>
+            </div>
+      
+            <div class="form-group col-8">
+              <label for="task-input-content">Task Content</label>
+              <input
+                class="form-control"
+                type="text"
+                id="task-input-content"
+                formControlName="contents"
+                placeholder="Write a new task content"
+              />
+              <div *ngIf="getFieldControl('contents')?.touched && getFieldControl('contents')?.invalid" class="error-message">
+                <div class="warning-message-input" *ngIf="getFieldControl('contents')?.hasError('required')">Campo obbligatorio</div>
+              </div>
+            </div>
+      
+            <div class="form-group col-12">
+              <button class="btn btn-success create" (click)="addTask()">Add Task</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <form *ngIf="isEditableMap[item.id]" [formGroup]="editForm">
-        <input class="form-control" formControlName="title" />
-      </form>
-    </td>
-    <td>
-      <div *ngIf="!isEditable(item.id)">
-        {{ item.contents }}
-      </div>
-      <form *ngIf="isEditable(item.id)" [formGroup]="editForm">
-        <input class="form-control" formControlName="contents" />
-      </form>
-    </td>
-    <td>
-      <button class="btn custom-btn-warning" (click)="toggleEdit(item.id)">
-        {{ isEditable(item.id) ? 'Save' : 'Edit' }}
-      </button>
-      <button class="btn custom-btn-danger" (click)="deleteItem(item.id)">
-        {{ isEditable(item.id) ? 'Cancel' : 'Delete' }}
-      </button>
-    </td>
-  </tr>
-  
+    </div>
+      
 
-  
-            <div class="warning-message-input" *ngIf="getFieldControl('name')?.hasError('required')">Campo obbligatorio</div>
-        </tbody>
-    </table>
+
+    <div class="table-container col-8">
+        <table *ngIf="toDoListItems" class="table table-dark table-hover table-responsive">
+            <thead>
+              
+                    <tr>
+                        <th>To do list:</th>
+                        
+                    </tr>
+              
+               
+            </thead>
+            <tbody>
+            
+
+
+                <tr *ngFor="let item of toDoListItems">
+                    <td>
+                        <div *ngIf="!isEditableMap[item.id]">
+                        {{ item.title }}
+                        </div>
+                        <form *ngIf="isEditableMap[item.id]" [formGroup]="editForm">
+                        <input class="form-control" formControlName="title" />
+                        </form>
+                    </td>
+                    <td>
+                        <div *ngIf="!isEditable(item.id)">
+                        {{ item.contents }}
+                        </div>
+                        <form *ngIf="isEditable(item.id)" [formGroup]="editForm">
+                        <input class="form-control" formControlName="contents" />
+                        </form>
+                    </td>
+                    <td>
+                        <button class="btn custom-btn-warning" (click)="toggleEdit(item.id)">
+                        {{ isEditable(item.id) ? 'Save' : 'Edit' }}
+                        </button>
+                        <button class="btn custom-btn-danger" (click)="deleteItem(item.id)">
+                        {{ isEditable(item.id) ? 'Cancel' : 'Delete' }}
+                        </button>
+                    </td>
+                </tr>
+
+
+
+                <div class="warning-message-input" *ngIf="getFieldControl('name')?.hasError('required')">Campo obbligatorio</div>
+            </tbody>
+        </table>
+    </div>
 </div>
+            

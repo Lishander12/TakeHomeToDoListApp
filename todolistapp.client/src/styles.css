@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    display: flex;
-    justify-content: center;
-    margin: 0;
+    
     background-color: #191d20;
     color: #fff;
 }
-
+.page-body{
+ display: flex;
+    justify-content: center;
+    margin: 0;
+}
 
 .table-container {
     max-width: 100%;
@@ -44,3 +46,26 @@ body{
 .navbar{
     background-color: #86229a;
 }
+.warning-message-input{
+    color: red;
+  }
+
+  .create{
+    margin-top: 1em;
+  }
+
+  .card{
+    margin-top:4em;
+  }
+
+  .card-header{
+    background-color: #86229a;
+  }
+
+  .navbar-title{
+    margin-left: 2em;
+    color: #fff;
+  }
+  .navbar-text{
+    color: #fff;
+  }

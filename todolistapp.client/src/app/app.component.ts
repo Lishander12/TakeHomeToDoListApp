@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     this.taskForm = this.fb.group({
       id: [''],
       title: ['', Validators.required],
-      contents: [''],
+      contents: ['', Validators.required],
       createdAt: ['']
     });
 
